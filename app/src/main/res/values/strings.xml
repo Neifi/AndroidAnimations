@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Animations</string>
+    <string name="logoOfAndroid">logo of android</string>
+    <string name="fadeIn">Fade in</string>
+    <string name="fadeout">Fade out</string>
+    <string name="zoomin">Zoom in</string>
+    <string name="zoomout">Zoom out</string>
+    <string name="leftRight">Left rigth</string>
+    <string name="bounce">Fade in</string>
+    <string name="rotate">Fade in</string>
+    <string name="topBottom">Fade in</string>
+    <string name="flash">Fade in</string>
+    <string name="several">Fade in</string>
+    <string name="actionText">Fade in</string>
+    <string name="animationSpeed">Animation speed</string>
+    <string name="actualAnim">STOP</string>
+
+</resources>
