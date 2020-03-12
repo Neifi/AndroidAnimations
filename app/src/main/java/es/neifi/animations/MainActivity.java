@@ -15,8 +15,8 @@ public class MainActivity extends AppCompatActivity {
     //Animations
     private ValueAnimator fadeIn;
     private ValueAnimator fadeOut;
-    private ValueAnimator zoomIn;
-    private ValueAnimator zoomOut;
+    private ValueAnimator zoomScaleX;
+    private ValueAnimator zoomScaleY;
     private ValueAnimator leftRight;
     private ValueAnimator topBottom;
     private ValueAnimator Bounce;
@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageView androidLogo;
 
+    private float scaleValue;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         currentAnimation = findViewById(R.id.currentAnimation);
         androidLogo = findViewById(R.id.androidLogo);
 
+        scaleValue = 0.5f;
         //Animations
         //the duration is in miliseconds
         fadeIn = ObjectAnimator.ofFloat(androidLogo,"alpha",0f,1f);
@@ -75,8 +78,19 @@ public class MainActivity extends AppCompatActivity {
         leftRight = ObjectAnimator.ofFloat(androidLogo,"translationX",1000f);
         leftRight.setDuration(1000);
 
+        //TODO listerner volver a la posicion original al acabar
         topBottom = ObjectAnimator.ofFloat(androidLogo,"translationY",1000f);
-        topBottom.setDuration(1000);
+        topBottom.setDuration(3000);
+
+
+        zoomScaleX = ObjectAnimator.ofFloat(androidLogo,"scaleX",scaleValue);
+        zoomScaleY = ObjectAnimator.ofFloat(androidLogo,"scaleY",scaleValue);
+
+        zoomScaleX.setDuration(1000);
+        zoomScaleY.setDuration(1000);
+
+    //a
+
 
     }
 }
